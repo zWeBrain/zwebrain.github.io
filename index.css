@@ -1,39 +1,78 @@
-/* nav new in blog */
-nav {
 
-    background-color: transparent;
-    margin: 10px 10px 0px 10px;
+body{
+    background: #d3ebff;
+}
+
+header{
+    background-color: #b5dbff;
+}
+
+
+header {
+    transform: translateZ(0); position: relative;
+    transition-property: color; transition-duration: 0.3s;
+}
+
+header:before {
+    content: "";position: absolute; z-index: -1; top: 0;
+    left: 0; right: 0; bottom: 0; background: #8ac7ff;
+    transform-origin: 0 50%;transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+header:hover, header:focus, header:active {
+    color: #b5dbff;
+}
+header:hover:before, header:focus:before, header:active:before {
+    transform: scaleX(1);
+}
+/*——————————————————————————————————————————————————————————————————————————*/
+
+/*导航栏的*/
+/*——————————————————————————————————————————————————————————————————————————*/
+
+nav {
+    margin: 20px;
+    width: 320px;
+    float: right;
 }
 
 nav ul {
-    margin: 5px;
+    margin: 0;
     list-style-type: none;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0 5px 0;
 }
 
 nav ul li {
     display: inline;
-    padding: 5px 10px 5px 10px;
+    padding: 0px 10px 5px 10px;
 }
 
-nav ul li a:link, nav ul li a:visited {
-    color: #66ccff;;
+nav ul li a{
+    padding: 3px;
+
+    text-decoration: none;
+
+    transform: translateZ(0); position: relative;
+    transition-property: color; transition-duration: 0.1s;
+}
+
+nav ul li a:link, nav ul li a:visited{
+    color: #002a72;
     border-bottom: none;
     font-weight: bold;
-
-    /* optional! very hard to see although does help */
-    /* text-shadow: 1px 1px 3px #e2c2c2;
-       try this and see if you like it */
-    text-transform: uppercase;
 }
 
-li.selected {
-    background-color: #e7fcc8;
+nav ul li a.selected{
+    border: #5484db 3px solid;
+    border-radius: 36px;
 }
 
-article span {
-    font-style: italic;
+nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
+    color: #5484db;
 }
+/*——————————————————————————————————————————————————————————————————————————*/
+
 
 .el-carousel__item h3 {
     color: #475669;
@@ -44,10 +83,44 @@ article span {
 }
 
 .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
+    background-image: url("images/photos/saxia.jpg");
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%
 }
 
 .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
+    background-image: url("images/photos/liweir.jpg");
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
+/*——————————————————————————————————————————————————————————————————————————*/
+
+div#tableContainer {
+    display: table;
+    border-spacing: 10px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+div#tableRow {
+    display: table-row;
+}
+
+aside {
+    display: table-cell;
+    background: #b5dbff ;
+    font-size: 105%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+section {
+    display: table-cell;
+    background: #b5dbff;
+    width: 70%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600");
