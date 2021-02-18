@@ -1,0 +1,53 @@
+/* nav new in blog */
+nav {
+
+    background-color: transparent;
+    margin: 10px 10px 0px 10px;
+}
+
+nav ul {
+    margin: 5px;
+    list-style-type: none;
+    padding: 5px 0px 5px 0px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: #66ccff;;
+    border-bottom: none;
+    font-weight: bold;
+
+    /* optional! very hard to see although does help */
+    /* text-shadow: 1px 1px 3px #e2c2c2;
+       try this and see if you like it */
+    text-transform: uppercase;
+}
+
+li.selected {
+    background-color: #e7fcc8;
+}
+
+article span {
+    font-style: italic;
+}
+
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+}
+
