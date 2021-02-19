@@ -1,0 +1,190 @@
+@import url("//unpkg.com/element-ui@2.15.0/lib/theme-chalk/index.css");
+
+
+
+
+/*标题*/
+/*——————————————————————————————————————————————————————————————————————————*/
+header{
+    background-color: #ffb5b5;
+}
+
+
+
+header:hover{
+    color: #ffb5b5;
+}
+
+header {
+    transform: translateZ(0); position: relative;
+    transition-property: color; transition-duration: 0.3s;
+}
+header:before {
+    content: "";position: absolute; z-index: -1; top: 0;
+    left: 0; right: 0; bottom: 0; background: #ff8a8a;
+    transform-origin: 0 50%;transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+header:hover, header:focus, header:active {
+    color: #ffb5b5;
+}
+header:hover:before, header:focus:before, header:active:before {
+    transform: scaleX(1);
+}
+/*——————————————————————————————————————————————————————————————————————————*/
+
+/*导航栏的*/
+/*——————————————————————————————————————————————————————————————————————————*/
+
+nav {
+    margin: 20px;
+    width: 320px;
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 5px 0 5px 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0px 10px 5px 10px;
+}
+
+nav ul li a{
+    padding: 3px;
+
+    text-decoration: none;
+
+    transform: translateZ(0); position: relative;
+    transition-property: color; transition-duration: 0.1s;
+}
+
+nav ul li a:link, nav ul li a:visited{
+    color: #720000;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+nav ul li a.selected{
+    border: #db5454 3px solid;
+    border-radius: 36px;
+}
+
+nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
+    color: #fffc97;
+}
+/*——————————————————————————————————————————————————————————————————————————*/
+
+/*走马灯*/
+/*——————————————————————————————————————————————————————————————————————————*/
+div#photo {
+    margin-top: 50px;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding: 20px;
+    border: 10px #ffb5b5 double;
+}
+
+
+
+
+.el-carousel__item time {
+    color: #720000;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'century Gothic', sans-serif;
+
+    background-color: white;
+
+    padding: 10px;
+    opacity: 0.75;
+    line-height: 600px;
+
+}
+
+.el-carousel__item#photo1 {
+    background-image: url("image/food1.jpg");
+    -moz-background-size:100% 100%; background-size:100% 100%;
+}
+
+.el-carousel__item#photo2 {
+    background-image: url("image/food2.jpg");
+    -moz-background-size:100% 100%; background-size:100% 100%;
+}
+
+.el-carousel__item#photo3 {
+    background-image: url("image/food3.jpg");
+    -moz-background-size:100% 100%; background-size:100% 100%;
+}
+
+
+
+/*背景*/
+/*——————————————————————————————————————————————————————————————————————————*/
+
+/*加了两张图片，所以用了一个full-screen的div作为另一张图片的存放*/
+div#full-screen{
+    background-image: url("image/background2.jpg");
+    background-repeat: no-repeat;
+    background-position: 20px 100px;
+    background-size: 15% 30%;
+    -moz-background-size:15% 30%;
+}
+
+body{
+    background-image: url("image/background.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 20% 40%;
+    -moz-background-size:20% 40%;
+}
+
+/*——————————————————————————————————————————————————————————————————————————*/
+/*搜索弹出*/
+div#tableContainer{
+    display: table;
+}
+
+div#tableRow{
+    display: table-row;
+}
+
+div#search{
+    position: fixed;
+    animation: myfirst 5s infinite alternate;
+}
+@keyframes myfirst {
+    0%{
+        top: 80px;
+        right: -320px;
+    }
+    100%{
+        top: 80px;
+        right: 10px;
+    }
+}
+div#search:hover{
+    -webkit-animation-play-state:paused;
+    animation-play-state:paused;
+}
+
+div#search-icon{
+    display: table-cell;
+    padding: 20px;
+}
+
+div#input{
+    display: table-cell;
+    padding: 20px;
+}
+/*——————————————————————————————————————————————————————————————————————————*/
+
+
+
+
+

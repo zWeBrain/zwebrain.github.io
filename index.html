@@ -2,72 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- import CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>zzyh.life</title>
+    <meta name="viewport" content="width=divic-width, initial-scale=1.0">
+    <title>欢迎来到zzyh.life</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
-<header>
-    <!--logo-->
-    <a href=" "><img id="logo" src="images/photos/logo.png" alt="logo zzyh.life"></a>
-
-    <!--导航栏-->
-    <nav>
-        <ul>
-            <li><a href="">介绍</a></li>
-            <li><a href="">学习</a></li>
-            <li><a href="">美食</a></li>
-            <li><a href="">旅游</a></li>
-            <li><a class="selected"  href="">随笔</a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
+    <div class="full-screen">
 
-<div id="tableContainer">
-    <div id="tableRow">
-        <section id="Carousel">
-            <div id="carousel_template">
-                <template>
-                    <el-carousel indicator-position="outside" height="400px">
-                        <el-carousel-item v-for="item in 5" :key="item">
-                            <h3></h3>
-                        </el-carousel-item>
-                    </el-carousel>
-                </template>
+        <video src="video/titan4.mp4" autoplay></video>
+
+        <div id="welcome-tableContainer">
+
+            <div id="welcome-tableRow1">
+                <h1 class="title">欢迎来到zzyh.life<br></h1>
             </div>
-        </section>
 
-        <aside>
-            <video src="videos/sit.mp4" controls autoplay width="100%"></video>
-            <hr>
-            <body>
-            <div style="text-align: center;">
-                <h3>早春呈水部张十八员外</h3>
-                唐 · 韩愈
-                <p>
-                    天街小雨润如酥<br>
-                    草色遥看近却无<br>
-                    最是一年春好处<br>
-                    绝胜烟柳满皇都<br>
+            <div id="welcome-tableRow2">
+                <a class="btn" href="main/main.html">GET STARTED</a>
+<!--                <a class="btn" href="https://zwebrain.github.io/">GET STARTED</a>-->
             </div>
-            </body>
-        </aside>
-    </div> <!-- tableRow -->
-</div> <!-- tableContainer -->
 
+        </div>
+
+    </div>
 </body>
-
-
-<!-- import Vue before Element -->
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<!-- import JavaScript -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script>
-    new Vue().$mount('#carousel_template')
-</script>
-
-
+<
 </html>

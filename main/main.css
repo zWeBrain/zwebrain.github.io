@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600");
+
+body{
+    background: #ecf4ff;
+}
+
+header{
+    background-color: #b5dbff;
+}
+
+
+header {
+    transform: translateZ(0); position: relative;
+    transition-property: color; transition-duration: 0.3s;
+}
+
+header:before {
+    content: "";position: absolute; z-index: -1; top: 0;
+    left: 0; right: 0; bottom: 0; background: #8ac7ff;
+    transform-origin: 0 50%;transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+header:hover, header:focus, header:active {
+    color: #b5dbff;
+}
+header:hover:before, header:focus:before, header:active:before {
+    transform: scaleX(1);
+}
+/*——————————————————————————————————————————————————————————————————————————*/
+
+/*导航栏的*/
+/*——————————————————————————————————————————————————————————————————————————*/
+
+nav {
+    margin: 20px;
+    width: 320px;
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 5px 0 5px 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0px 10px 5px 10px;
+}
+
+nav ul li a{
+    padding: 3px;
+
+    text-decoration: none;
+
+    transform: translateZ(0); position: relative;
+    transition-property: color; transition-duration: 0.1s;
+}
+
+nav ul li a:link, nav ul li a:visited{
+    color: #002a72;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+nav ul li a.selected{
+    border: #5484db 3px solid;
+    border-radius: 36px;
+}
+
+nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
+    color: #5484db;
+}
+/*——————————————————————————————————————————————————————————————————————————*/
+
+div#mainIntro{
+
+}
+
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+    background-image: url("image/saxia.jpg");
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%
+}
+
+.el-carousel__item:nth-child(2n+1) {
+    background-image: url("image/liweir.jpg");
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+/*——————————————————————————————————————————————————————————————————————————*/
+
+div.tableContainer {
+    display: table;
+    border-spacing: 10px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+div.tableRow {
+    display: table-row;
+}
+
+aside {
+    display: table-cell;
+    background: #b5dbff;
+    font-size: 105%;
+    width: 30%;
+    padding-right: 30px;
+    vertical-align: top;
+}
+
+section {
+    display: table-cell;
+    background: #b5dbff;
+    width: 70%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+
+
+/*日历*/
+/*——————————————————————————————————————————————————————————————————————————*/
+#calendar{
+    display: table-cell;
+    background: #ecf4ff;
+    border: #5484db 5px solid;
+    border-radius: 5px;
+}
+
+#calendar .top{
+    /*height: 10px;*/
+    /*line-height: 10px;*/
+    text-align: center;
+    position: relative;
+}
+
+
+#topDate{
+    font-size: 10px;
+}
+
+#week td{
+    font-size: 10px;
+}
+
+td{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #002a72;
+    font-weight: bold;
+    text-align: center;
+    font-size: 10px;
+}
+
+#tbody td:hover{
+    background: #c2e1ff;
+    cursor: pointer;
+}
+
+.curDate{
+    color: #5484db;
+    font-weight: bold;
+}
+
+#left, #right{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#left{
+    /*padding-right: 60px;*/
+    left: 0;
+}
+#right{
+    /*padding-left: 60px;*/
+    right: 0;
+}
+#left:hover, #right:hover{
+    color: #5484db;
+}
+
+/*——————————————————————————————————————————————————————————————————————————*/
+
+/*视频和古诗*/
+/*——————————————————————————————————————————————————————————————————————————*/
+video#video{
+    display: table-cell;
+}
+div#poem{
+    display: table-cell;
+    background: #ecf4ff;
+    border: #5484db 5px solid;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+
+
+/*音乐播放器*/
+/*——————————————————————————————————————————————————————————————————————————*/
+
+.btn{
+    height: 32px;
+    width: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.play{
+    display: block;
+}
+
+.pause{
+    display: none;
+}
+
+.audioPlayer{
+    display: table-cell;
+    position: relative;
+    /*width: 570px;*/
+    /*height: 42px;*/
+    border-radius: 10px;
+    /*margin: 300px auto;*/
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #5484db;
+}
+
+.totalProgress{
+    display: table-cell;
+    cursor: pointer;
+    position: absolute;
+    top: 26px;
+    left: 50px;
+    width: 200px;
+    height: 8px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.currentProgress{
+    width: 0;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #b5dbff;
+}
+
+.time{
+    display: block;
+    margin-left: 10px;
+    position: absolute;
+    top: 2px;
+    left: 72px;
+    color: white;
+}
+
+
+/*文字信息*/
+/*——————————————————————————————————————————————————————————————————————————*/
+
+.text {
+    font-size: 14px;
+}
+
+.item {
+    padding: 18px 0;
+}
+
+.box-card {
+    width: 480px;
+}

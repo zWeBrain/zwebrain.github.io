@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divic-width, initial-scale=1.0">
+    <title>美食区</title>
+    <link rel="stylesheet" href="food.css">
+</head>
+
+
+
+
+
+
+<body>
+
+<div id="full-screen">
+
+    <header>
+        <!--logo-->
+        <a href="../main/main.html"><img id="logo" src="../general_image/logo.png" alt="logo zzyh.life"></a>
+
+        <!--导航栏-->
+        <nav>
+            <ul>
+                <li><a href="../introduction/introduction.html">介绍</a></li>
+                <li><a href="../study/study.html">学习</a></li>
+                <li><a class="selected" href="food.html">美食</a></li>
+                <li><a href="../trip/trip.html">旅游</a></li>
+                <li><a href="../note/note.html">随笔</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--照片栏-->
+    <div id="photo">
+        <template>
+            <!--autoplay="false" indicator-position="none"-->
+            <el-carousel :interval="4000" type="card" height="350px">
+                <el-carousel-item id="photo1" v-for="item in 1" :key="item">
+                    <time datetime="2020-05-16">May.16th 2020</time>
+                </el-carousel-item>
+
+                <el-carousel-item id="photo2" v-for="item in 1" :key="item">
+                    <time datetime="2020-06-11">Jun.11th 2020</time>
+                </el-carousel-item>
+
+                <el-carousel-item id="photo3" v-for="item in 1" :key="item">
+                    <time datetime="2020-09-22">Sep.22th 2020</time>
+                </el-carousel-item>
+
+            </el-carousel>
+        </template>
+    </div>
+
+    <div id="search">
+
+        <div id="tableContainer">
+            <div id="tableRow">
+
+                <div id="input">
+                    <el-input v-model="input" placeholder="想看看啥吃的？" clearable></el-input>
+                </div>
+
+                <div id="upload">
+                    <el-button icon="el-icon-search" circle></el-button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+
+<!-- java script导入 -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.15.0/lib/index.js"></script>
+
+
+<!-- 走马灯 -->
+<script>
+    new Vue().$mount('#photo')
+</script>
+
+
+<!-- 搜索输入框 -->
+<script>
+    var Main = {
+        data() {
+            return {
+                input: ''
+            }
+        }
+    }
+    var Ctor = Vue.extend(Main)
+    new Ctor().$mount('#input')
+</script>
+
+
+<!-- 查询按钮 -->
+<script>
+    new Vue().$mount('#upload')
+</script>
+
+</html>

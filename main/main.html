@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>zzyh.life</title>
+</head>
+
+<header>
+    <!--logo-->
+    <a href="main.html"><img id="logo" src="../general_image/logo.png" alt="logo zzyh.life"></a>
+
+    <!--导航栏-->
+    <nav>
+        <ul>
+            <li><a href="">介绍</a></li>
+            <li><a href="">学习</a></li>
+            <li><a href="../food/food.html">美食</a></li>
+            <li><a href="">旅游</a></li>
+            <li><a href="">随笔</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<div class="tableContainer">
+
+    <div class="tableRow">
+
+
+        <section id="Carousel">
+
+            <div id="carousel_template">
+                <template>
+                    <el-carousel indicator-position="outside" height="400px">
+                        <el-carousel-item v-for="item in 5" :key="item">
+                            <h3></h3>
+                        </el-carousel-item>
+                    </el-carousel>
+                </template>
+            </div>
+
+            <div id="main-message">
+                <el-card class="box-card" shadow="hover" style="width: 100%">
+                    <p>
+                        湛湛宝宝是傻傻<br>
+                        我是天才帅狗
+                    </p>
+                </el-card>
+            </div>
+
+
+        </section>
+
+
+        <aside>
+            <div class="tableContainer">
+                <div class="tableRow">
+                    <div id='calendar'>
+                        <v-calendar :value="null"
+                                    color="red"
+                                    is-range
+                                    :attributes='attrs'
+                                    title-position="left"
+                                    trim-weeks>
+                        </v-calendar>
+                    </div>
+                </div>
+                <!-- —————————————————————————————————————————————————— -->
+                <div class="tableRow">
+<!--                    <video id="video" src="video/sit.mp4" controls autoplay width="100%"></video>-->
+                    <div class="audioPlayer">
+
+
+                        <div class="btn">
+                            <img src="image/play.png" class="play" alt="play" width="27px" height="27px"/>
+                            <img src="image/pause.png" class="pause" alt="pause" width="25px" height="25px"/>
+                        </div>
+                        <div class="time">
+                            <span class="currentTime">00:00</span>
+                            /
+                            <span class="totalTime">00:00</span>
+                        </div>
+                        <audio id="audio" src="music/上原れな%20-%20届かない恋.mp3"></audio>
+                        <div class="totalProgress">
+                            <div class="currentProgress"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- —————————————————————————————————————————————————— -->
+                <div class="tableRow">
+                    <div id="poem" style="text-align: center">
+                        <h4>早春呈水部张十八员外</h4>
+                        <h6>唐·韩愈</h6>
+                        <p id="poem-content">
+                            天街小雨润如酥<br>
+                            草色遥看近却无<br>
+                            最是一年春好处<br>
+                            绝胜烟柳满皇都<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div> <!-- tableRow -->
+
+</div> <!-- tableContainer -->
+
+</body>
+
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- 走马灯 -->
+<script>
+    new Vue().$mount('#carousel_template')
+</script>
+
+
+<!-- 日历 -->
+<script src='https://unpkg.com/v-calendar'></script>
+<script>
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+    new Vue({
+        el: '#calendar',
+        data: {
+            attrs: [
+                {
+                    key: 'today',
+                    highlight: {
+                        color: 'blue',
+                        fillMode: 'solid',
+                        contentClass: 'italic',
+                    },
+                    dates: new Date(year, month, day),
+                },
+
+                {
+                    highlight: {
+                        color: 'purple',
+                        fillMode: 'light',
+                    },
+                    dates: new Date(year, 9-1, 22),
+                },
+                {
+                    highlight: {
+                        color: 'purple',
+                        fillMode: 'outline',
+                    },
+                    dates: new Date(year, 5-1, 16),
+                },
+            ],
+            selectedDate: new Date(),
+        }
+    })
+</script>
+
+<!-- 音乐播放器 -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/audioPlayer.js"></script>
+
+<!-- 文字卡 -->
+<script src="//unpkg.com/element-ui@2.15.0/lib/index.js"></script>
+<script>
+    new Vue().$mount('#main-message')
+</script>
+
+</html>
